@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "html.format.endWithNewline": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.indentHandlebars": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.fontSize": 18,
+  "editor.detectIndentation": false,
+  "files.autoSave": "afterDelay"
+}

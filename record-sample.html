@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="eng">
 
-
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 
@@ -136,7 +135,7 @@
                     </div>
                 </div>
 
-                <form>
+                <form action="https://www.foo.com" method="POST">
                     <div class="row" id="form">
                         <div class="col-lg-12 col-md-12">
                             
@@ -150,11 +149,11 @@
                                 <span class="form-label">"Has the patient given consent for participating in this research (link) ? * "</span> </label><br>
                                         <label for="roundtrip">
                                         
-                                        <input type="radio" id="roundtrip" name="flight-type">
+                                        <input type="radio" id="roundtrip" name="research_consent" value="Yes">
                                         <span></span> Yes
                                         </label><br>
                                         <label for="one-way">
-                                            <input type="radio" id="one-way" name="flight-type">
+                                            <input type="radio" id="one-way" name="research_consent" value="No">
                     
                                             <span></span>No
                                         </label>
@@ -170,12 +169,12 @@
                                         
                                             <label for="roundtrip_1">
                                         
-                                        <input type="radio" id="roundtrip_1" name="flight-type">
+                                        <input type="radio" id="roundtrip_1" name="smoker" value="Yes">
                                         <span></span> Yes
                                         </label><br>
         
                                         <label for="one-way_1">
-                                            <input type="radio" id="one-way_1" name="flight-type">
+                                            <input type="radio" id="one-way_1" name="smoker" value="No">
                     
                                             <span></span>No
                                         </label><br><br><br>
@@ -188,7 +187,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <span class="form-label">Please enter your COVID19 condition here *</span>
-                                    <select class="form-control" name="covid19">
+                                    <select class="form-control" name="condition">
                                         <option>Please enter your condition</option>
                                         <option>Positive</option>
                                         <option>Negative</option>
@@ -205,7 +204,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Select Age Group</span>
-                                    <select class="form-control">
+                                    <select class="form-control" name="age_group">
                                         <option>Select age group</option>
                                         <option>18 - 30</option>
                                         <option>41 - 40</option>
@@ -220,7 +219,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Select Gender</span>
-                                    <select class="form-control">
+                                    <select class="form-control" name="gender">
                                         <option>Select Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
@@ -256,49 +255,49 @@
                                 <span class="form-label">Patient Reported Symptoms * </span><br><br>
                                         <label for="roundtrip55">
                                         
-                                        <input type="checkbox" id="roundtrip55" name="flight-type">
+                                        <input type="checkbox" id="roundtrip55" name="reported_symptoms" value="Fever, chills, or sweating">
                                         <span></span> Fever, chills, or sweating
                                      
                                         </label><br>
                                         <label for="roundtrip56">
-                                            <input type="checkbox" id="roundtrip56" name="flight-type">
+                                            <input type="checkbox" id="roundtrip56" name="reported_symptoms" value="Shortness of breath">
             
                                             <span></span>Shortness of breath
                                         </label><br>
             
                                         <label for="roundtrip57">
-                                            <input type="checkbox" id="roundtrip57" name="flight-type">
+                                            <input type="checkbox" id="roundtrip57" name="reported_symptoms" value="New or worsening cough">
             
                                             <span></span> New or worsening cough
                                         </label><br>
                                        
                                         <label for="roundtrip58">
-                                            <input type="checkbox" id="roundtrip58" name="flight-type">
+                                            <input type="checkbox" id="roundtrip58" name="reported_symptoms" value="Sore throat">
             
                                             <span></span>Sore throat
                                         </label><br>
                                        
                                         <label for="roundtrip59">
-                                            <input type="checkbox" id="roundtrip59" name="flight-type">
+                                            <input type="checkbox" id="roundtrip59" name="reported_symptoms" value="Body aches">
             
                                             <span></span>Body aches
                                         </label><br>
                                        
                                         <label for="roundtrip60">
-                                            <input type="checkbox" id="roundtrip60" name="flight-type">
+                                            <input type="checkbox" id="roundtrip60" name="reported_symptoms" value="Loss of taste">
             
                                             <span></span>Loss of taste
                                             
                                             
                                         </label><br>
                                         <label for="roundtrip61">
-                                            <input type="checkbox" id="roundtrip61" name="flight-type">
+                                            <input type="checkbox" id="roundtrip61" name="reported_symptoms" value="Loss of smell">
             
                                             <span></span>Loss of smell
                                             
                                         </label><br>
                                         <label for="roundtrip62">
-                                            <input type="checkbox" id="roundtrip62" name="flight-type">
+                                            <input type="checkbox" id="roundtrip62" name="reported_symptoms" value="None">
             
                                             <span></span>None
                                         </label>
@@ -319,43 +318,43 @@
                                                   </span><br><br>
                                                         <label for="mh1">
                                                         
-                                                        <input type="checkbox" id="mh1" name="flight-type">
+                                                        <input type="checkbox" id="mh1" name="medical_history" value="Asthma or chronic lung disease">
                                                         <span></span> Asthma or chronic lung disease
                                                      
                                                         </label><br>
                                                         <label for="mh2">
-                                                            <input type="checkbox" id="mh2" name="flight-type">
+                                                            <input type="checkbox" id="mh2" name="medical_history" value="Pregnancy">
                             
                                                             <span></span>Pregnancy
                                                         </label><br>
                             
                                                         <label for="mh3">
-                                                            <input type="checkbox" id="mh3" name="flight-type">
+                                                            <input type="checkbox" id="mh3" name="medical_history" value="Diabetes with complications">
                             
                                                             <span></span> Diabetes with complications
                                                         </label><br>
                                                        
                                                         <label for="mh4">
-                                                            <input type="checkbox" id="mh4" name="flight-type">
+                                                            <input type="checkbox" id="mh4" name="medical_history" value="Disease or conditions that make it harder to cough">
                             
                                                             <span></span>Disease or conditions that make it harder to cough
                                                         </label><br>
                                                        
                                                         <label for="mh5">
-                                                            <input type="checkbox" id="mh5" name="flight-type">
+                                                            <input type="checkbox" id="mh5" name="medical_history" value="Congestive heart failure">
                             
                                                             <span></span>Congestive heart failure
                                                         </label><br>
                                                        
                                                         <label for="mh6">
-                                                            <input type="checkbox" id="mh6" name="flight-type">
+                                                            <input type="checkbox" id="mh6" name="medical_history" value="Extreme obesity">
                             
                                                             <span></span>Extreme obesity
                                                         </label><br>
                                                        
                                                        
                                                         <label for="mh7">
-                                                            <input type="checkbox" id="mh7" name="flight-type">
+                                                            <input type="checkbox" id="mh7" name="medical_history" value="None">
                             
                                                             <span></span>None
                                                         </label>
@@ -374,10 +373,11 @@
 
                          
                                     <div class="col-md-6">
-										<a href="record-sample.html" class="butn butn-light mt-30">
+										<!-- <a href="record-sample.html" class="butn butn-light mt-30">
                                             <span>Submit</span>
-                                        </a>
+                                        </a> -->
                                         
+                                        <button>Submit</button>
                                     </div>
                                 </div>
                             
@@ -429,10 +429,6 @@
 
     <!-- End Footer ====
         ======================================= -->
-
-
-
-
 
     <!-- jQuery -->
     <script src="js/jquery-3.0.0.min.js"></script>
