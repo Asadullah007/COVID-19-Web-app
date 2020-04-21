@@ -135,7 +135,7 @@
                     </div>
                 </div>
 
-                <form action="https://www.foo.com" method="POST">
+                <form id="myForm" method="POST" enctype="multipart/form-data">
                     <div class="row" id="form">
                         <div class="col-lg-12 col-md-12">
                             
@@ -149,11 +149,11 @@
                                 <span class="form-label">"Has the patient given consent for participating in this research (link) ? * "</span> </label><br>
                                         <label for="roundtrip">
                                         
-                                        <input type="radio" id="roundtrip" name="research_consent" value="Yes">
+                                        <input type="radio" id="research_consent" name="research_consent" value="Yes">
                                         <span></span> Yes
                                         </label><br>
                                         <label for="one-way">
-                                            <input type="radio" id="one-way" name="research_consent" value="No">
+                                            <input type="radio" id="research_consent" name="research_consent" value="No">
                     
                                             <span></span>No
                                         </label>
@@ -169,12 +169,12 @@
                                         
                                             <label for="roundtrip_1">
                                         
-                                        <input type="radio" id="roundtrip_1" name="smoker" value="Yes">
+                                        <input type="radio" id="smoker" name="smoker" value="Yes">
                                         <span></span> Yes
                                         </label><br>
         
                                         <label for="one-way_1">
-                                            <input type="radio" id="one-way_1" name="smoker" value="No">
+                                            <input type="radio" id="smoker" name="smoker" value="No">
                     
                                             <span></span>No
                                         </label><br><br><br>
@@ -377,7 +377,7 @@
                                             <span>Submit</span>
                                         </a> -->
                                         
-                                        <button>Submit</button>
+                                        <button id="submit" type="submit" >Submit</button>
                                     </div>
                                 </div>
                             
