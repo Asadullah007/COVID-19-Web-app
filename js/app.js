@@ -79,6 +79,8 @@ function startRecording() {
     })
     .catch(function (err) {
       //enable the record button if getUserMedia() fails
+      console.log('Failed')
+      console.log(err)
       recordButton.disabled = false;
       stopButton.disabled = true;
       pauseButton.disabled = true;
@@ -164,7 +166,7 @@ function createDownloadLink(blob) {
     event.preventDefault();
     
     var fd = new FormData(form);
-    fd.append("audio_data", blob, filename);
+    fd.append("cough_audio", blob, filename + ".wav");
 
     // xhr.open("POST", "http://localhost:3000/add_user", true);
     // xhr.setRequestHeader("Content-Type", "multipart/form-data");
@@ -191,11 +193,11 @@ function createDownloadLink(blob) {
 
 // Access the form element...
 
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault();
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-//   sendData();
-// });
+  //sendData();
+});
 
 // function submit(event) {
 //   event.preventDefault();
