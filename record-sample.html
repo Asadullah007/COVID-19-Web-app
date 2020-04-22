@@ -101,6 +101,7 @@
 									<div class="row uniform">
 									<div class="6u$">
 										<div class="select-wrapper">
+                      <label>Country</label>
 											<select name="country" id="demo-category">
 												<option value="">- Country -</option>
 												<option value="Pakistan">Pakistan</option>
@@ -112,7 +113,8 @@
 								</div>
 									<!-- Break -->
                                     <!-- Break -->
-									
+                    <br>
+									<label>Patient ID</label>
 										<div class="row uniform">
 											
 											<div class="6u 12u$(small)">
@@ -124,7 +126,7 @@
 								<div class="row uniform">
 									<label>Corona Test </label>
 									<div class="12u 12u$(small)">
-										<input type="radio" id="Positive" name="condition" value="Position">
+										<input type="radio" id="Positive" name="condition" value="Positive>
 										<label for="Positive">Positive</label>
 									</div>
 									<div class="12u 12u$(small)">
@@ -139,7 +141,7 @@
                 
                 	<!-- Break -->
 								<div class="row uniform">
-								<div id="controls">
+								<div id="cough">
 									<button id="recordButton">Record</button>
 									<button id="pauseButton" disabled>Pause</button>
 									<button id="stopButton" disabled>Stop</button>
@@ -148,22 +150,13 @@
                 <div id="formats">Format: start recording to see sample rate</div>
                     <p><strong>Recordings:</strong></p>
                     <ol id="recordingsList"></ol>
-								 <!-- Break -->
-								 <!-- <div class="row uniform">
-									<div id="breath">
-										<button id="recordButton">Record</button>
-										<button id="pauseButton" disabled>Pause</button>
-										<button id="stopButton" disabled>Stop</button>
-									 </div>
-									</div> -->
-									 <!-- Break -->
-            
+                 <!-- Break -->          
 									
 									
 								 <div class="row uniform"><br>
 									 <label>Please upload 15-second video(s) of the patient's index fingertip pressed down on the smartphone camera with flash turned on.(instructions) Optional</label>
 									<div class="6u 6u$(xsmall)">
-										<input type="file" name="patient_id" id="patient_id" value="" placeholder="patient id" />
+										<input type="file" name="video" id="video" value="" placeholder="patient id" />
 									</div>
 								</div>
 							<!-- Break -->

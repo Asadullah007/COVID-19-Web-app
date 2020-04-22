@@ -124,6 +124,9 @@ function stopRecording() {
 const form = document.getElementById("myForm");
 const submit_btn = document.getElementById('submit')
 
+let i = 0;
+var fd = new FormData(form);
+
 function createDownloadLink(blob) {
   var url = URL.createObjectURL(blob);
   var au = document.createElement("audio");
@@ -156,6 +159,13 @@ function createDownloadLink(blob) {
   upload.href = "#";
   upload.innerHTML = "Upload";
 
+  if (i == 0) {
+    fd.append("cough_audio", blob, filename + ".wav");
+  } else if(i==1) {
+    fd.append("breath_audio", blob, filename + ".wav");
+  }
+  
+
   submit_btn.addEventListener("click", function (event) {
     // var xhr = new XMLHttpRequest();
     // xhr.onload = function (e) {
@@ -163,10 +173,7 @@ function createDownloadLink(blob) {
     //     console.log("Server returned: ", e.target.responseText);
     //   }
     // };
-    event.preventDefault();
-    
-    var fd = new FormData(form);
-    fd.append("cough_audio", blob, filename + ".wav");
+    event.preventDefault();    
 
     // xhr.open("POST", "http://localhost:3000/add_user", true);
     // xhr.setRequestHeader("Content-Type", "multipart/form-data");
@@ -183,6 +190,8 @@ function createDownloadLink(blob) {
       console.log(error)
     })
   });
+
+  i++;
 
   li.appendChild(document.createTextNode(" ")); //add a space in between
   li.appendChild(upload); //add the upload link to li
