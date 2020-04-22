@@ -124,14 +124,15 @@ function stopRecording() {
 const form = document.getElementById("myForm");
 const submit_btn = document.getElementById('submit')
 
-let i = 0;
-var fd = new FormData(form);
+let blob_arr = [];
 
 function createDownloadLink(blob) {
   var url = URL.createObjectURL(blob);
   var au = document.createElement("audio");
   var li = document.createElement("li");
   var link = document.createElement("a");
+
+  blob_arr.push(blob)
 
   //name of .wav file to use during upload and download (without extendion)
   var filename = new Date().toISOString();
@@ -159,13 +160,6 @@ function createDownloadLink(blob) {
   upload.href = "#";
   upload.innerHTML = "Upload";
 
-  if (i == 0) {
-    fd.append("cough_audio", blob, filename + ".wav");
-  } else if(i==1) {
-    fd.append("breath_audio", blob, filename + ".wav");
-  }
-  
-
   submit_btn.addEventListener("click", function (event) {
     // var xhr = new XMLHttpRequest();
     // xhr.onload = function (e) {
@@ -173,7 +167,11 @@ function createDownloadLink(blob) {
     //     console.log("Server returned: ", e.target.responseText);
     //   }
     // };
-    event.preventDefault();    
+    event.preventDefault();
+    
+    var fd = new FormData(form);
+    fd.append("cough_audio", blob_arr[0], filename + ".wav");
+    fd.append("breath_audio", blob_arr[1], filename + ".wav");
 
     // xhr.open("POST", "http://localhost:3000/add_user", true);
     // xhr.setRequestHeader("Content-Type", "multipart/form-data");
@@ -190,8 +188,6 @@ function createDownloadLink(blob) {
       console.log(error)
     })
   });
-
-  i++;
 
   li.appendChild(document.createTextNode(" ")); //add a space in between
   li.appendChild(upload); //add the upload link to li
